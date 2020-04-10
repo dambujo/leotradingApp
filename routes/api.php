@@ -17,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('testeAPI', function(){
+    echo "Teste de API";
+});
+
+Route::post('register', 'API\v1\UsersController@register');
+Route::post('login', 'API\v1\UsersController@login');
